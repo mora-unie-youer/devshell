@@ -8,6 +8,8 @@ final: prev:
       buildInputs = packages;
 
       shellHook = ''
+        export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${final.lib.makeLibraryPath packages}
+
         PRJ_ROOT=$PWD
 
         rel_root() {
