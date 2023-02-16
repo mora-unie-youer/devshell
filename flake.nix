@@ -4,7 +4,7 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
   outputs = inputs: {
-    overlays.default = import ./overlay.nix;
+    overlays.default = import ./.;
     templates = import ./templates.nix;
   };
 }

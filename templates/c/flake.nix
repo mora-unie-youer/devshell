@@ -1,5 +1,5 @@
 {
-  description = "c - devshell prepared for C";
+  description = "c - devshell prepared for C development";
 
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";

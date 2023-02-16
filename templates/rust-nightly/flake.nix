@@ -1,5 +1,5 @@
 {
-  description = "rust-nightly - devshell prepared for Rust Nightly";
+  description = "rust-nightly - devshell prepared for Rust (Nightly) development";
 
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";

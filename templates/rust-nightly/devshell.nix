@@ -1,12 +1,13 @@
 { pkgs, ... }:
 
-pkgs.devshell.mkShell {
-  name = "rust-nightly";
+pkgs.devShell.mkShell {
   packages = with pkgs; [
+    # Toolchain required for C + Rust binaries building
     binutils
     gcc
-
-    (rust-bin.selectLatestNightlyWith (toolchain: toolchain.default.override {
+    # Nightly Rust toolchain
+    (rust-bin.selectLatestNightlyWith (toochain: toolchain.default.override {
+      # Extensions which ease your development process
       extensions = [ "rust-analyzer" "rust-src" ];
     }))
   ];

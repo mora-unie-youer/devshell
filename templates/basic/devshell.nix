@@ -1,7 +1,3 @@
 { pkgs, ... }:
 
-pkgs.devshell.mkShell {
-  name = "basic";
-  packages = with pkgs; [
-  ];
-}
+pkgs.devShell.mkShell
