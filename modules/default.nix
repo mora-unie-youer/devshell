@@ -21,6 +21,8 @@ let
 in
 {
   mkShell = pkgs.mkShell {
+    buildInputs = module.config.packages;
+
     shellHook = ''
       # Shell hook before shell initialization
       ${module.config.preInitShellHook}
