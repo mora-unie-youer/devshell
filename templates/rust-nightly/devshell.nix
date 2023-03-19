@@ -6,7 +6,7 @@ pkgs.devShell.mkShell {
     binutils
     gcc
     # Nightly Rust toolchain
-    (rust-bin.selectLatestNightlyWith (toochain: toolchain.default.override {
+    (rust-bin.selectLatestNightlyWith (toolchain: toolchain.default.override {
       # Extensions which ease your development process
       extensions = [ "rust-analyzer" "rust-src" ];
     }))
