@@ -34,7 +34,7 @@ in
       if [[ $COLORTERM = "truecolor" ]] || [[ $COLORTERM = "24bit" ]]; then
         # We have 24-bit colors
         HEX_COLOR=${config.colors."24bit"}
-        COLOR=$(printf "\e[38;2;%d;%d;%d2m" 0x''${HEX_COLOR:1:2} 0x''${HEX_COLOR:3:2} 0x''${HEX_COLOR:5:2})
+        COLOR=$(printf "\e[38;2;%d;%d;%dm" 0x''${HEX_COLOR:1:2} 0x''${HEX_COLOR:3:2} 0x''${HEX_COLOR:5:2})
       else
         _colors=$(tput colors)
         if [[ "$_colors" = "256" ]]; then
